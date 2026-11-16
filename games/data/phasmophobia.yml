@@ -37,7 +37,7 @@ r2modman:
       - route: "BepInEx/core"
         isDefaultLocation: false
         defaultFileExtensions: []
-        trackingMethod: "subdir"
+        trackingMethod: "state"
         subRoutes: []
       - route: "BepInEx/patchers"
         isDefaultLocation: false
@@ -56,6 +56,8 @@ r2modman:
         trackingMethod: "none"
         subRoutes: []
     relativeFileExclusions: null
+    doorstopTargetAssembly: "BepInEx/core/Phasma.Boot.dll"
+    removeLinkedFilesOnExit: true
 thunderstore:
   displayName: "Phasmophobia"
   listed: false
