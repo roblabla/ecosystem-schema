@@ -90,6 +90,10 @@ const r2modmanSchema = z.strictObject({
   packageLoader: z.enum(ModmanPackageLoaderValues),
   installRules: z.array(installRuleSchema),
   relativeFileExclusions: z.array(z.string()).nullable(),
+  // Profile-relative; replaces the BepInEx preloader r2modman finds in BepInEx/core as Doorstop's target.
+  doorstopTargetAssembly: z.string().optional(),
+  // Files are copied into the game folder only at a modded start, and removed once the game exits.
+  removeLinkedFilesOnExit: z.boolean().optional(),
 });
 
 export const gameSchema = z.strictObject({

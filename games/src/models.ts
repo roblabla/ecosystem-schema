@@ -75,6 +75,8 @@ export interface GameModmanDefinition {
   packageLoader: ModmanPackageLoader;
   installRules: ModmanInstallRule[];
   relativeFileExclusions: string[] | null;
+  doorstopTargetAssembly?: string;
+  removeLinkedFilesOnExit?: boolean;
 }
 
 export interface ThunderstoreCommunityMeta {
